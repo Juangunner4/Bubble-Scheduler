@@ -1,3 +1,3 @@
 # Bubble-Scheduler
 
-Problem Statement: Adding features to the graphic bubble scheduler, such as; options to view required textbooks for the selected course and more info regarding selected course. 
+Problem Statement: Adding features to the graphic bubble scheduler, such as; options to view required textbooks for the selected course and more info regarding selected course. Potentially add athletic info for athletes...
