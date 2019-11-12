@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<!-- Schedule Maker  -	by David Waybill & Rasheeda Crews 2012-04-17, 
-			modified by Charles Cooley 2012-04-22 to integrate with myEMU, 
+<!-- Schedule Maker  -	by David Waybill & Rasheeda Crews 2012-04-17,
+			modified by Charles Cooley 2012-04-22 to integrate with myEMU,
 			reworked to elimiate need for PNG by Charles Cooley 2012-04-24
 			improved support for multi-line entries and revised instructions CDC 2013-06-25
 			add button to show/hide hours past 5:00 pm CDC 2013-09-05 -->
@@ -12,7 +12,8 @@
 <style type="text/css">
 body { margin: 0; padding: 0; font: 11pt Arial }
 div { overflow: hidden }
-body > h2 { text-align: center; height: 30px; overflow: hidden; width: 6in; margin: 0 0.5in 0 1in }
+h1 { text-align: center; height: 100px; overflow: hidden; width: 100%; margin: 0 0.5in 0 1in }
+body > h2 { text-align: center; height: 30px; overflow: hidden; width: 100%; margin: 0 0.5in 0 1in }
 form { margin: 1em 0 2em 1em; width: 7.5in }
 form h4 { margin-bottom: 0 }
 form p input:first-child { float: right; margin-right: 15px }
@@ -26,7 +27,7 @@ form p input:first-child { float: right; margin-right: 15px }
 #blockHolder > div > table > tbody > tr > td > div:first-child { float: left; text-align: left }
 #blockHolder > div > table > tbody > tr > td > div:first-child + div { float: right; text-align: right }
 #blockHolder > div > table > tbody > tr > td > div:last-child { float: right; text-align: right; }
-#grid { padding-left: 0.5in; font-size: 10pt; width: 7in }
+#grid { padding-left: 0.5in; margin: 0; font-size: 10pt; max-width: 100%; max-height: 100%;}
 #grid > div { float: left; display: table-row; vertical-align: middle }
 #grid .hour { width: 0.4in; margin-left: -0.5in; text-align: right }
 #grid .hour > div { height: 60px; width: 0.35in }
@@ -53,7 +54,7 @@ form p input:first-child { float: right; margin-right: 15px }
 #gridexample tr:last-child { vertical-align: bottom }
 @media print { form { display: none } }
 #grid.dayonly .hour div:nth-child(n+12),
-#grid.dayonly .day .night, 
+#grid.dayonly .day .night,
 #grid.dayonly .MWF .evening { display: none }
 #grid.dayonly .TR .evening { height: 23px }
 #grid.dayonly .border { height: 600px }
@@ -61,7 +62,7 @@ form.hide { display: none }
 </style>
 </head>
 <body>
-
+<h1 id="title">Bubble Scheduler</h1>
 <h2 id="scheduleName">Schedule</h2>
 
 <div class="" id="grid">
@@ -75,8 +76,8 @@ form.hide { display: none }
 </div>
 
 
-<div id="blockHolder"><div style="top: 182px; left: 314px; background-color:#EEEEEE; height: 26px; width: 128px"><table><tbody><tr><td><div></div><div></div></td></tr><tr><td><div></div><div></div>CHAPEL </td></tr><tr><td><div></div><div></div></td></tr></tbody></table></div><div style="top: 182px; left: 583px; background-color:#EEEEEE; height: 26px; width: 128px"><table><tbody><tr><td><div></div><div></div></td></tr><tr><td><div></div><div></div>CHAPEL </td></tr><tr><td><div></div><div></div></td></tr></tbody></table></div><div style="top: 182px; left: 45px; background-color:#EEEEEE; height: 86px; width: 128px"><table><tbody><tr><td><div></div><div></div></td></tr><tr><td><div></div><div></div>Meetings </td></tr><tr><td><div></div><div></div></td></tr></tbody></table></div><div style="top: 362px; left: 583px; background-color:#FF88FF; height: 146px; width: 128px"><table><tbody><tr><td><div>CS 488</div><div></div></td></tr><tr><td><div></div><div></div><b>Adv. Architecture</b></td></tr><tr><td><div></div><div>1:00-3:30
-</div></td></tr></tbody></table></div><div style="top: 62px; left: 448px; background-color:#99aaff; height: 476px; width: 129px"><table><tbody><tr><td><div></div><div></div></td></tr><tr><td><div></div><div></div><b>Reserved</b></td></tr><tr><td><div></div><div>8:00-4:00
+<div id="blockHolder"><div style="top: 282px; left: 40px; background-color:#EEEEEE; height: 26px; width: 20%"><table><tbody><tr><td><div></div><div></div></td></tr><tr><td><div></div><div></div>Other</td></tr><tr><td><div></div><div></div></td></tr></tbody></table></div><div style="top: 182px; left: 360px; background-color:#EEEEEE; height: 86px; width: 20%"><table><tbody><tr><td><div></div><div></div></td></tr><tr><td><div></div><div></div>Meetings </td></tr><tr><td><div></div><div></div></td></tr></tbody></table></div><div style="top: 443px; left: 680px; background-color:#FF88FF; height: 140px; width: 20%"><table><tbody><tr><td><div>CS 488</div><div></div></td></tr><tr><td><div></div><div></div><b>Adv. Architecture</b></td></tr><tr><td><div></div><div>1:00-3:30
+</div></td></tr></tbody></table></div><div style="top: 162px; left: 1005px; background-color:#99aaff; height: 295px; width: 20%"><table><tbody><tr><td><div></div><div></div></td></tr><tr><td><div></div><div></div><b>Reserved</b></td></tr><tr><td><div></div><div>8:00-4:00
 </div></td></tr></tbody></table></div></div>
 
 <div id="scheduleComment"><div> <i>To schedule this room contact  Lynn Quay or Cheryl Doss.</i></div></div>
@@ -88,7 +89,7 @@ form.hide { display: none }
 <div>
 <p><input onclick="toggleDayOnly()" id="endToggle" value="5:00 pm end" type="button">
 <input onclick="addBlockList()" value="Update Events" type="button"></p>
-<textarea style="width: 700px; height: 605px;" name="classes" rows="40" cols="80">
+<textarea style="width: 50%; height: 605px;" name="classes" rows="40" cols="80">
 &lt;title&gt;Schedule&lt;/title&gt;
 
 WF 10:00-10:30 \`CHAPEL $#EEEEEE
@@ -103,7 +104,7 @@ R 8:00-4:00
 \`&lt;b&gt;Reserved&lt;/b&gt;\``8:00-4:00
 $#blue
 
-&lt;i&gt;To schedule this room contact 
+&lt;i&gt;To schedule this room contact
 Lynn Quay or Cheryl Doss.&lt;/i&gt;
 </textarea>
 <p><input onclick="hideForm()" value="Hide form and instructions (use before save and then upload to web, reloading locally unhides again)" type="button"></p>
@@ -115,26 +116,26 @@ Lynn Quay or Cheryl Doss.&lt;/i&gt;
 <h4>Title Entry</h4>
 <p>Text in a title tag will be used as the page and table title. (Text outside of the tag will be unused.)</p>
 <h4>Events</h4>
-<p>An event entry begins with a day code and times and specify blocks to be displayed on the grid. 
+<p>An event entry begins with a day code and times and specify blocks to be displayed on the grid.
 For example, "MTR 11:00-2:00" will create blocks for Monday, Tuesday, and Thursday from 11:00 AM to 2:00 PM.</p>
 <table summary="" id="gridexample"><tbody>
 <tr><td>TL</td><td>TC</td><td>TR</td></tr>
 <tr><td>ML</td><td>MC</td><td>MR</td></tr>
 <tr><td>BL</td><td>BC</td><td>BR</td></tr>
 </tbody></table>
-<p>The contents of an event block are aligned in 9 areas indicated by the ` and \ separators. 
-The \ symbols divide the block into three vertical sections, the first is aligned at the top of the 
-block, the second is placed in the middle, and the third is placed at the bottom. Pairs of ` symbols 
+<p>The contents of an event block are aligned in 9 areas indicated by the ` and \ separators.
+The \ symbols divide the block into three vertical sections, the first is aligned at the top of the
+block, the second is placed in the middle, and the third is placed at the bottom. Pairs of ` symbols
 divide each line into three parts, the first is left-aligned, the second is centered and the third,
 right-aligned.  "TL`TC`TR\ML`MC`MR\BL`BC`BR" would appear as shown at the right.</p>
 <p>The text of an event can include HTML tags for additional formatting but the `, \, and $ characters should
 not be used.</p>
 <p>The final component of an event entry is an optional color specification which is a $ followed by an HTML
 color code or name. For example, $red and $#FF0000 both make the background of the block red. There are also
-a limited set of custom colors $#red, $#green, $#blue, $#yellow, $#orange, $#purple, and $#cyan which are 
+a limited set of custom colors $#red, $#green, $#blue, $#yellow, $#orange, $#purple, and $#cyan which are
 shades of those colors designed to be readable and distinguishable when printed without color.</p>
 <h4>Note Events</h4>
-<p>Any entries that aren't a title or time block entry are added below the time grid as notes. General HTML 
+<p>Any entries that aren't a title or time block entry are added below the time grid as notes. General HTML
 tags and formatting can be used, but avoid blank lines which would create a new entry.</p>
 
 <script type="text/javascript">
@@ -147,7 +148,7 @@ tags and formatting can be used, but avoid blank lines which would create a new 
 			tmp = 21;
 		return tmp;
 	}
-	
+
 	function minute_in_range(minute){
 		tmp = 1 * minute;
 		if (tmp < 0)
@@ -158,7 +159,7 @@ tags and formatting can be used, but avoid blank lines which would create a new 
 			tmp= "0" + tmp;
 		return tmp;
 	}
-	
+
 	function addclass() {
 		var s = document.sched;
 		var addstring = "";
@@ -167,21 +168,21 @@ tags and formatting can be used, but avoid blank lines which would create a new 
 		if (s.wednesday.checked) { addstring += "W"; }
 		if (s.thursday.checked)  { addstring += "R"; }
 		if (s.friday.checked)    { addstring += "F"; }
-		
+
 		if (addstring == "") {
 			alert("You need to pick a day")
 			return
 		}
-			
+
 		addstring += " " + hour_in_range(s.start_hour.value) + "";
 		addstring += ":" + minute_in_range(s.start_minute.value) + "";
 		addstring += "-" + hour_in_range( s.end_hour.value) + "";
 		addstring += ":" + minute_in_range(s.end_minute.value) + "";
 		addstring += " " + s.class_desc.value + "";
 		addstring += " $" + s.color.value;
-		
+
 		s.classes.value += addstring + '\n';
-		
+
 		/* clear the class form */
 		s.monday.checked = false;
 		s.tuesday.checked = false;
@@ -193,10 +194,10 @@ tags and formatting can be used, but avoid blank lines which would create a new 
 		s.start_minute.value = "";
 		s.end_hour.value = "";
 		s.end_minute.value = "";
-		
+
 		addBlock(addstring);
 	}
-		
+
 	function addBlockList() {
 		blockHolder.innerHTML = "";
 		comment.innerHTML = "";
@@ -209,9 +210,9 @@ tags and formatting can be used, but avoid blank lines which would create a new 
 		}
 	}
 
-	var day_top, day_left = {}, day_width = {}; 
+	var day_top, day_left = {}, day_width = {};
 
-	window.onload= function() { 
+	window.onload= function() {
 		day_top = document.getElementById("M1").offsetTop - 1;
 		day_left["M"] = document.getElementById("M1").offsetLeft - 1;
 		var day = [ "M", "T", "W", "R", "F", "B" ];
@@ -258,7 +259,7 @@ tags and formatting can be used, but avoid blank lines which would create a new 
 	}
 
 
-	var special_color = { 	"#purple" : "#aa77ff", "#red" : "#ff8888", "#green" : "#77ee77", "#blue" : "#99aaff", 
+	var special_color = { 	"#purple" : "#aa77ff", "#red" : "#ff8888", "#green" : "#77ee77", "#blue" : "#99aaff",
 				"#yellow" : "#eeee77", "#orange" : "#ff9977", "#cyan" : "#66dddd" }
 
 	function addBlock(blockstring) {
@@ -284,14 +285,14 @@ tags and formatting can be used, but avoid blank lines which would create a new 
 		} else if (blockstring.match(/[^\s\n\r]/)) {
 			comment.innerHTML = comment.innerHTML + "<div> " + blockstring + "<\/div>";
 		}
-		
-		
-	}	
+
+
+	}
 
 	function addBlockToSched(day, start, end, label,color) {
 		var t = document.createElement("div");
 		t.setAttribute('style', 'top: ' + (start - 1) + 'px; left: ' +
-				(day_left[day] - 1) + 'px; background-color:' + color + '; height: ' + 
+				(day_left[day] - 1) + 'px; background-color:' + color + '; height: ' +
 				(end - 4) +'px; width: ' + (day_width[day] - 6) + 'px');
 		if (label.match(/[`\\]/)) {
 			var lines = (label+"\\\\").split("\\");
@@ -301,7 +302,7 @@ tags and formatting can be used, but avoid blank lines which would create a new 
 			}
 			label = '<table><tr>' + lines.slice(0,3).join('<\/tr><tr>') + '<\/tr><\/table>';
 		}
-		t.innerHTML = label; 
+		t.innerHTML = label;
 		blockHolder.appendChild(t);
 	 }
 
