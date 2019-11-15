@@ -1,3 +1,5 @@
+# Juan Vazquez CS 375 Financial Simulator project
+
 """ This Python script will be used to scrape data from a pdf filed by taking in
 inputs and finding that data in the PDF.
 """
@@ -17,7 +19,14 @@ from nltk.corpus import stopwords
 
 pagesofpdf = []
 
+scheduleofcourse = {}
+
+
+
+
 def text_extractor(path):
+
+    code = input()
 
     pdf = open(path, 'rb')
 
@@ -32,7 +41,11 @@ def text_extractor(path):
         count += 1
         text += pageObj.extractText()
         pagesofpdf.append(text.split('\n'))
-    print(type(pagesofpdf))  
-    print(pagesofpdf)
+        for words in pagesofpdf[0]:
+            if code in words:
+                scheduleofcourse[words] = {}
+    print('dictionary', scheduleofcourse)
+
+            
      
 text_extractor('EMU-Schedule-Of-Undergraduate-Course-Offerings.pdf')
