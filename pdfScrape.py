@@ -23,7 +23,6 @@ scheduleofcourse = {}
 
 
 
-
 def text_extractor(path):
 
     code = input()
@@ -41,11 +40,18 @@ def text_extractor(path):
         count += 1
         text += pageObj.extractText()
         pagesofpdf.append(text.split('\n'))
-        for words in pagesofpdf[0]:
+        page = pagesofpdf[0]
+        for i, words in enumerate(page):
+            if code in words and 'PXD' not in code:
+                print(i, words)
+                scheduleofcourse[words] = page[i-2], page[i+2]
             if code in words:
-                scheduleofcourse[words] = {}
+                print(i, words)
+                scheduleofcourse[words] = page[i-1], page[i+2]
     print('dictionary', scheduleofcourse)
 
             
      
 text_extractor('EMU-Schedule-Of-Undergraduate-Course-Offerings.pdf')
+
+
