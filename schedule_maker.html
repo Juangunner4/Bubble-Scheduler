@@ -29,26 +29,26 @@ form p input:first-child { float: right; margin-right: 15px }
 #blockHolder > div > table > tbody > tr > td > div:first-child { float: left; text-align: left }
 #blockHolder > div > table > tbody > tr > td > div:first-child + div { float: right; text-align: right }
 #blockHolder > div > table > tbody > tr > td > div:last-child { float: right; text-align: right; }
-#grid { padding-left: 0.5in; padding-right: 0.5in; margin: 0; font-size: 10pt; max-width: 100%; max-height: 100%;}
-#grid > div { float: left; display: table-row; vertical-align: middle }
+#grid { padding-left: 0.6in; padding-right: 0.6in; margin: 0; font-size: 10pt; max-width: 100%; max-height: 100%;}
+#grid > div { float: left; display: table-row; vertical-align: middle }			
 #grid .hour { width: 0.4in; margin-left: -0.5in; text-align: right }
 #grid .hour > div { height: 60px; width: 0.35in }
 #grid .hour > div:first-child { height: 25px }
 #grid .hour > div:last-child { height: 20px }
-#grid .day { width: 20%; border: 2px solid black; border-right: 0; margin: 0 1px 0 -3px; font-size: 8pt }
-#grid .day > div { width: 100%; height: 8px; border-bottom: 2px solid #AAA; text-align: center }
-#grid .day > div:first-child { height: 30px; line-height: 30px; font-size: 13pt; border-bottom: 2px solid black }
+#grid .day { width: 20%; border: 2px solid red; border-right: 0; margin: 0 1px 0 -3px; font-size: 8pt }
+#grid .day > div { width: 100%; height: 8px; border-bottom: 2.5px solid #AAA; text-align: center }
+#grid .day > div:first-child { height: 30px; line-height: 30px; font-size: 13pt; border-bottom: 2px solid red }
 #grid .day > div:last-child { border-bottom: 0 }
-#grid .border { height: 810px; border-left: 2px solid black; width: 0 }
+#grid .border { height: 810px; border-left: 2px solid red; width: 0 }
 #grid .break { font-size: 10pt }
-#grid .MWF .block { height: 48px;  line-height: 48px }
-#grid .TR .block { height: 73px;  line-height: 73px }
+#grid .MWF .block { height: 58px;  line-height: 58px }
+#grid .TR .block { height: 89px;  line-height: 89px }
 #grid .MWF .break { height: 28px; line-height: 28px }
 #grid .TR .break { height: 53px; line-height: 53px }
 #grid .MWF .evening { height: 88px; line-height: 88px }
 #grid .TR .evening { height: 113px; line-height: 113px }
 #grid .day .night { height: 118px; line-height: 118px }
-#grid .day .block, #grid .day .night { font-size: 6pt; color: grey }
+#grid .day .block, #grid .day .night { font-size: 8pt; color: grey; text-align: center; }
 #gridexample { float:right; height: 6em; width: 10em; border: 2px solid; margin: 0 1em }
 #gridexample td:last-child { text-align: right }
 #gridexample td:nth-child(2) { text-align: center }
@@ -82,7 +82,8 @@ form.hide { display: none }
 </div></td></tr></tbody></table></div><div style="top: 162px; left: 1005px; background-color:#99aaff; height: 295px; width: 20%"><table><tbody><tr><td><div></div><div></div></td></tr><tr><td><div></div><div></div><b>Reserved</b></td></tr><tr><td><div></div><div>8:00-4:00
 </div></td></tr></tbody></table></div></div>
 
-<div id="scheduleComment"><div> <i>To schedule this room contact  Lynn Quay or Cheryl Doss.</i></div></div>
+<!-- ><div id="scheduleComment"><div> <i>To schedule this room contact  Lynn Quay or Cheryl Doss.</i></div></div> -->
+
 
 
 <!-- Nothing below this point prints -->
@@ -106,39 +107,15 @@ R 8:00-4:00
 \`&lt;b&gt;Reserved&lt;/b&gt;\``8:00-4:00
 $#blue
 
+
+
 &lt;i&gt;To schedule this room contact
 Lynn Quay or Cheryl Doss.&lt;/i&gt;
+
+
 </textarea>
 <p><input onclick="hideForm()" value="Hide form and instructions (use before save and then upload to web, reloading locally unhides again)" type="button"></p>
 </div>
-<h3>Instructions:</h3>
-<p>Use the text area above to enter a title, events, notes for display then press the "Update Events" button.</p>
-<p>Using "Save Page As..." and the "Web Page, complete" format will save any changes made.</p>
-<p>Events and notes are separted by at least one blank line, so multi-line text is possible.</p>
-<h4>Title Entry</h4>
-<p>Text in a title tag will be used as the page and table title. (Text outside of the tag will be unused.)</p>
-<h4>Events</h4>
-<p>An event entry begins with a day code and times and specify blocks to be displayed on the grid.
-For example, "MTR 11:00-2:00" will create blocks for Monday, Tuesday, and Thursday from 11:00 AM to 2:00 PM.</p>
-<table summary="" id="gridexample"><tbody>
-<tr><td>TL</td><td>TC</td><td>TR</td></tr>
-<tr><td>ML</td><td>MC</td><td>MR</td></tr>
-<tr><td>BL</td><td>BC</td><td>BR</td></tr>
-</tbody></table>
-<p>The contents of an event block are aligned in 9 areas indicated by the ` and \ separators.
-The \ symbols divide the block into three vertical sections, the first is aligned at the top of the
-block, the second is placed in the middle, and the third is placed at the bottom. Pairs of ` symbols
-divide each line into three parts, the first is left-aligned, the second is centered and the third,
-right-aligned.  "TL`TC`TR\ML`MC`MR\BL`BC`BR" would appear as shown at the right.</p>
-<p>The text of an event can include HTML tags for additional formatting but the `, \, and $ characters should
-not be used.</p>
-<p>The final component of an event entry is an optional color specification which is a $ followed by an HTML
-color code or name. For example, $red and $#FF0000 both make the background of the block red. There are also
-a limited set of custom colors $#red, $#green, $#blue, $#yellow, $#orange, $#purple, and $#cyan which are
-shades of those colors designed to be readable and distinguishable when printed without color.</p>
-<h4>Note Events</h4>
-<p>Any entries that aren't a title or time block entry are added below the time grid as notes. General HTML
-tags and formatting can be used, but avoid blank lines which would create a new entry.</p>
 
 <script type="text/javascript">
  <!--
