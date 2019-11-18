@@ -35,17 +35,17 @@ def text_extractor(path):
     count = 0
     text = ""
 
-    while count < 1: #num_pages:
+    while count < num_pages:
         pageObj = pdfreader.getPage(count)
         count += 1
         text += pageObj.extractText()
         pagesofpdf.append(text.split('\n'))
-        page = pagesofpdf[0]
+        page = pagesofpdf[count]
         for i, words in enumerate(page):
             if code in words and 'PXD' not in code:
                 print(i, words)
                 scheduleofcourse[words] = page[i-2], page[i+2]
-            if code in words:
+            if  code in words and 'PXD' in code:
                 print(i, words)
                 scheduleofcourse[words] = page[i-1], page[i+2]
     print('dictionary', scheduleofcourse)
