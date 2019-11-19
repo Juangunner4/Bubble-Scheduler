@@ -35,17 +35,25 @@ def text_extractor(path):
     count = 0
     text = ""
 
-    while count < num_pages:
+    while count < 1: #num_pages:
         pageObj = pdfreader.getPage(count)
         count += 1
         text += pageObj.extractText()
         pagesofpdf.append(text.split('\n'))
-        page = pagesofpdf[count]
+        page = pagesofpdf[0]
+        print(type(page))
+        for j, line in enumerate(page):
+            if '$' in line:
+                page.remove(line)
+        print(page)
         for i, words in enumerate(page):
-            if code in words and 'PXD' not in code:
+            if code in words and 'CORE 1' in code and 'PXD' not in code:
                 print(i, words)
                 scheduleofcourse[words] = page[i-2], page[i+2]
             if  code in words and 'PXD' in code:
+                print(i, words)
+                scheduleofcourse[words] = page[i-1], page[i+2]
+            if code in words and 'SOC' in code:
                 print(i, words)
                 scheduleofcourse[words] = page[i-1], page[i+2]
     print('dictionary', scheduleofcourse)
@@ -53,5 +61,3 @@ def text_extractor(path):
             
      
 text_extractor('EMU-Schedule-Of-Undergraduate-Course-Offerings.pdf')
-
-
