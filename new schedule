@@ -1,0 +1,81 @@
+<html>
+
+
+<style type="text/css">
+
+body { margin: 0; padding: 20; font: 12pt Arial }
+ 
+table.center {margin-left:auto; margin-right:auto;}
+
+.time{width: 0.4in; margin-left: 0 in; text-align: right;}
+
+
+.Mon {border: 2px solid red; padding: 10px;}
+.Tues {border: 2px solid red; padding: 10px; }
+.Wed {border: 2px solid red; padding: 10px; }
+.Thur {border: 2px solid red; padding: 10px; }
+.Fri {border: 2px solid red; padding: 10px; }
+	
+	
+
+</style>
+
+
+<table class="center">
+	<body>
+	
+	<caption> Schedule</caption>
+		<thead>
+		
+			<th scope="col" class="Mon"> Monday </th><br>
+			<br>
+			<th scope="col" class="Tues"> Tuesday </th>
+			<th scope="col" class="Wed"> Wednesday </th> 
+			<th scope="col" class="Thur"> Thursday </th> 
+			<th scope="col" class="Fri"> Friday </th> 
+		
+		</thead>
+		
+		<tbody>
+		
+		</tbody>
+				
+</table>
+
+<div class="time" style="width:350px; margin:10;">
+		<div>
+		<div>8:00</div><br>
+		<br>
+		<div>9:00</div><br>
+		<br>
+		<div>10:00</div><br>
+		<br>
+		<div>11:00</div><br>
+		<br>
+		<div>12:00</div><br>
+		<br>
+		<div>1:00</div><br>
+		<br>
+		<div>2:00</div><br>
+		<br>
+		<div>3:00</div><br>
+		<br>
+		<div>4:00</div><br>
+		<br>
+		<div>5:00</div><br>
+		<br>
+		<div>6:00</div><br>
+		<br>
+		<div>7:00</div><br>
+		<br>
+		<div>8:00</div><br>
+		<br>
+		<div>9:00</div><br>
+		<br>
+		<dive>10:00</div>
+		</div>
+
+	
+	
+	</body>
+</html>
