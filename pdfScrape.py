@@ -44,18 +44,27 @@ def text_extractor(path):  # Opens a pdf path and extracts the text with some ex
                 page.remove(line)
     return page
 
-def Codefinder():
+
+Courses = []  # Stores the Course and the Time
+
+def Codefinder(): # Searches the PDF for the Code and adds it to the Courses list
 
     
     pages = text_extractor('EMU-Schedule-Of-Undergraduate-Course-Offerings.pdf')
-    
 
-    code = input('Code of the course')
 
+    print('Please provide the Course Code you would like to add to your schedule\n')
+
+    code = input('Code of the course, type quit to finish adding courses')
+        
     for i, line in enumerate(pages):
 
         if code in line and line[5:8].isdigit():
-            print(line)
-            print(pages[i-1])
+            if line not in Courses:
+                Courses.append(line)
+                Courses.append(pages[i-1])
+   
 
 Codefinder()
+print(Courses)
+
