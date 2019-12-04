@@ -10,6 +10,8 @@ from PyPDF2 import PdfFileReader
 
 import textract
 
+import re
+
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 
@@ -56,7 +58,13 @@ def Codefinder(): # Searches the PDF for the Code and adds it to the Courses lis
     print('Please provide the Course Code you would like to add to your schedule\n')
 
     code = input('Code of the course, type quit to finish adding courses')
-        
+
+    regex = re.match(r"(?P<Course>\D+)(?P<Code>\d+)(?P<Class>\w+)", code)
+
+    codelist = [regex.group('Course'), regex.group('Code'), regex.group('Class')]
+
+    code = codelist[0]+' '+codelist[1]+'  '+codelist[2]
+
     for i, line in enumerate(pages):
 
         if code in line and line[5:8].isdigit():
