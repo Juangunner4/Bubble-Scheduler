@@ -3,38 +3,40 @@
 
 <style type="text/css">
 
+.line {width: 112px; height: 47px; border-bottom: 1px solid black; position: absolute;}
+
 body { margin: 0; padding: 20; font: 12pt Arial }
  
 table.center {margin-left:auto; margin-right:auto;}
 
-.time{width: 0.4in; margin-left: 0 in; text-align: right;}
+.time{font-family: Georgia, Times, serif;width: 0.4in; margin-left: 0in; text-align: left;}
 
+.Mon {font-family: Georgia, Times, serif; border: 1.5px solid red; padding: 15px; width: 20%;}
+.Tues {font-family: Georgia, Times, serif;border: 1.5px solid red; padding: 15px; width: 20%;}
+.Wed {font-family: Georgia, Times, serif;border: 1.5px solid red; padding: 15px; width: 20%;}
+.Thur {font-family: Georgia, Times, serif;border: 1.5px solid red; padding: 15px; width: 20%;}
+.Fri {font-family: Georgia, Times, serif;border: 1.5px solid red; padding: 15px; width: 20%;}
 
-.Mon {border: 2px solid red; padding: 10px;}
-.Tues {border: 2px solid red; padding: 10px; }
-.Wed {border: 2px solid red; padding: 10px; }
-.Thur {border: 2px solid red; padding: 10px; }
-.Fri {border: 2px solid red; padding: 10px; }
-	
+.vertical { height: 300px; border-left: 2px solid black; position: absolute; left: 50%;}
 	
 
 </style>
 
 
-<table class="center">
+<table class="center" width="70%">
 	<body>
 	
-	<caption> Schedule</caption>
+	<caption> Insert student name </caption>
 		<thead>
-		
-			<th scope="col" class="Mon"> Monday </th><br>
-			<br>
+			<th scope ="col" class="Mon" > Monday </th>
 			<th scope="col" class="Tues"> Tuesday </th>
 			<th scope="col" class="Wed"> Wednesday </th> 
 			<th scope="col" class="Thur"> Thursday </th> 
-			<th scope="col" class="Fri"> Friday </th> 
+			<th scope="col" class="Fri" > Friday </th> 
 		
 		</thead>
+		
+		
 		
 		<tbody>
 		
@@ -42,7 +44,9 @@ table.center {margin-left:auto; margin-right:auto;}
 				
 </table>
 
-<div class="time" style="width:350px; margin:10;">
+
+
+<div class="time" style="width:350px; margin:80px;">
 		<div>
 		<div>8:00</div><br>
 		<br>
@@ -74,8 +78,7 @@ table.center {margin-left:auto; margin-right:auto;}
 		<br>
 		<dive>10:00</div>
 		</div>
-
 	
-	
+	<div class="vertical"/>
 	</body>
 </html>
