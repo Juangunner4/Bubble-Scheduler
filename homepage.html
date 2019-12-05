@@ -16,12 +16,29 @@
 		<h1>Welcome to EMU Bubble Scheduler</h1>
 		<h2>Input the course codes you will like to add to the Schedule</h2>
 		<h3> A course code consists of () Characters</h3>
-		<button>Add Courses</button>
+		<button onclick="Displayform()">Add Courses</button>
 	</div>
   <!-- Form -->
-	<div class="contact-form">
+	<div id="formcode">
 		<form>
+			First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
 		</form>
 	</div>
+<script>
+	function Displayform() {
+	  var x = document.getElementById("formcode");
+	  if (x.style.display === "none") {
+	    x.style.display = "block";
+	  } else {
+	    x.style.display = "none";
+	  }
+	}
+</script>
 </body>
 </html>
