@@ -3,43 +3,69 @@
 
 <style type="text/css">
 
-.line {width: 112px; height: 47px; border-bottom: 1px solid black; position: absolute;}
+.vl { border-right: 6px solid black; height: 780px; padding: 60px; margin: 30px; position: absolute; top: 44px; right:1175px}
+.v2 { border-right: 6px solid black; height: 780px; padding: 60px; margin: 30px; position: absolute; top: 44px; right:967px}
+.v3 { border-right: 6px solid black; height: 780px; padding: 60px; margin: 30px; position: absolute; top: 44px; right:755px}
+.v4 { border-right: 6px solid black; height: 780px; padding: 60px; margin: 30px; position: absolute; top: 44px; right:543px}
+.v5 { border-right: 6px solid black; height: 780px; padding: 60px; margin: 30px; position: absolute; top: 44px; right:332px}
+.v6 { border-right: 6px solid black; height: 780px; padding: 60px; margin: 30px; position: absolute; top: 44px; right:125px}
 
 body { margin: 0; padding: 20; font: 12pt Arial }
  
-table.center {margin-left:auto; margin-right:auto;}
+table.center {margin-left:auto; margin-right:auto; position: abosolute;}
 
 .time{font-family: Georgia, Times, serif;width: 0.4in; margin-left: 0in; text-align: left;}
 
-.Mon {font-family: Georgia, Times, serif; border: 1.5px solid red; padding: 15px; width: 20%;}
+.Mon {font-family: Georgia, Times, serif; border: 1.5px solid red; padding: 15px; width:20%;}
 .Tues {font-family: Georgia, Times, serif;border: 1.5px solid red; padding: 15px; width: 20%;}
 .Wed {font-family: Georgia, Times, serif;border: 1.5px solid red; padding: 15px; width: 20%;}
 .Thur {font-family: Georgia, Times, serif;border: 1.5px solid red; padding: 15px; width: 20%;}
-.Fri {font-family: Georgia, Times, serif;border: 1.5px solid red; padding: 15px; width: 20%;}
+.Fri {font-family: Georgia, Times, serif;border: 1.5px solid red; padding: 10px; width: 20%;}
 
-.vertical { height: 300px; border-left: 2px solid black; position: absolute; left: 50%;}
 	
 
 </style>
 
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
 
-<table class="center" width="70%">
-	<body>
+
+<script>
+	$(function() {
 	
-	<caption> Insert student name </caption>
+	$('#panel1').hide(300).show(1000);
+	$('#panel2').hide(300).show(1000);
+	$('#panel3').hide(300).show(1000);
+	$('#panel4').hide(300).show(1000);
+	$('#panel5').hide(300).show(1000);
+	
+	});
+	
+</script>
+
+<table class="center" width="80%">
+	<body>
+
+	<caption>  </caption>
 		<thead>
-			<th scope ="col" class="Mon" > Monday </th>
-			<th scope="col" class="Tues"> Tuesday </th>
-			<th scope="col" class="Wed"> Wednesday </th> 
-			<th scope="col" class="Thur"> Thursday </th> 
-			<th scope="col" class="Fri" > Friday </th> 
+			<th scope ="col" id="panel1" class="Mon" > Monday </th>
+			<th scope="col" id="panel2" class="Tues"> Tuesday </th>
+			<th scope="col" id="panel3" class="Wed"> Wednesday </th> 
+			<th scope="col" id="panel4" class="Thur"> Thursday </th> 
+			<th scope="col" id="panel5" class="Fri" > Friday </th> 
 		
 		</thead>
 		
 		
-		
 		<tbody>
 		
+		<div class="vl"></div>
+		<div class="v2"></div>
+		<div class="v3"></div>
+		<div class="v4"></div>
+		<div class="v5"></div>
+		<div class="v6"></div>		
 		</tbody>
 				
 </table>
