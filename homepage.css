@@ -78,9 +78,10 @@ button {
 }
 
 .message-title button:hover{
-	background-color: #555555;
-	color: white;
-	box-shadow: 5px 5px 2px black;
+	background-color: #387ace;
+        color: white;
+        box-shadow: 5px 5px 2px black;
+        border: 3px dotted white;
 }
 
 #formcode {
