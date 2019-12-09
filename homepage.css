@@ -29,13 +29,14 @@ img {
 	top: 0;
 	z-index: 6;
 }
-
 .message-title {
-	margin-top: 100px;
-	color: #fff;
-	text-transform: uppercase;
-	text-shadow: 2px 2px 4px #000000;
-	transition: all 3s ease-in-out;
+        margin-top: 100px;
+        color: #fff;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 4px #000000;
+        transition: all 3s ease-in-out;
+        border: 4px inset white;
+        border-radius: 5px;
 }
 
 .message-title h1{
