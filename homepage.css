@@ -11,7 +11,7 @@ body {
 	perspective: 1px;
 	transform-style: preserve-3d;
 	height: 100%;
-  text-align: center;
+  	text-align: center;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -54,19 +54,21 @@ img {
 
 button {
 	background-color: #555555;
-	border: none;
-	text-align: center;
-	text-decoration: none;
-	color: white;
-	display: inline-block;
-	font-size: 16px;
-	cursor: pointer;
-	transition-duration: 0.5s;
-	margin: 4px 2px;
-	padding: 16px 32px;
-	border-radius: 8px;
-	box-shadow: 5px 5px 2px grey;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        font-family: technical;
+        font-size: 16px;
+        cursor: pointer;
+        transition-duration: 0.5s;
+        margin: 4px 2px;
+        padding: 16px 32px;
+        border-radius: 8px;
+        box-shadow: 4px 4px 2px black;
 }
+
 
 .message-title button{
 	background-color: white;
