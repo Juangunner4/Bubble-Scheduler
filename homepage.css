@@ -96,6 +96,14 @@ button {
         position: absolute;
         color: white;
         border-radius: 5px;
-
-
+}
+.inputone {
+        width: 600px;
+        background: #037ffc;
+        border: none;
+        outline: none;
+        border-bottom: 5px inset black;
+        color: white;
+        font-size: 18px;
+        margin-bottom: 16px;
 }
