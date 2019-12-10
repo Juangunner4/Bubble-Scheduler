@@ -3,35 +3,61 @@
 
 <style type="text/css">
 
-.vl { border-right: 6px solid black; height: 780px; padding: 60px; margin: 30px; position: absolute; top: 44px; right:1175px}
-.v2 { border-right: 6px solid black; height: 780px; padding: 60px; margin: 30px; position: absolute; top: 44px; right:967px}
-.v3 { border-right: 6px solid black; height: 780px; padding: 60px; margin: 30px; position: absolute; top: 44px; right:755px}
-.v4 { border-right: 6px solid black; height: 780px; padding: 60px; margin: 30px; position: absolute; top: 44px; right:543px}
-.v5 { border-right: 6px solid black; height: 780px; padding: 60px; margin: 30px; position: absolute; top: 44px; right:332px}
-.v6 { border-right: 6px solid black; height: 780px; padding: 60px; margin: 30px; position: absolute; top: 44px; right:125px}
-
-body { margin: 0; padding: 20; font: 12pt Arial }
+body { margin: 4; padding: 20; font: 12pt Arial }
  
 table.center {margin-left:auto; margin-right:auto; position: abosolute;}
 
-.time{font-family: Georgia, Times, serif;width: 0.4in; margin-left: 0in; text-align: left;}
-
+<!--/*Days of the week header CSS*/-->
 .Mon {font-family: Georgia, Times, serif; border: 1.5px solid red; padding: 15px; width:20%;}
 .Tues {font-family: Georgia, Times, serif;border: 1.5px solid red; padding: 15px; width: 20%;}
 .Wed {font-family: Georgia, Times, serif;border: 1.5px solid red; padding: 15px; width: 20%;}
 .Thur {font-family: Georgia, Times, serif;border: 1.5px solid red; padding: 15px; width: 20%;}
 .Fri {font-family: Georgia, Times, serif;border: 1.5px solid red; padding: 10px; width: 20%;}
 
-	
+<!--/* Columns for each day of the week CSS*/ -->
+.M {display: grid; position: absolute; height:500px; padding: 15px; right: 990px; text-align: center; top: 65px; width:200px; }
+.W {display: grid; position: absolute; height:500px;  padding: 15px; right: 565px; text-align: center; top: 65px; width:200px;}
+.F {display: grid; position: absolute; height:500px;  padding: 15px; right: 145px; text-align: center; top: 65px; width:200px;}
+
+.T {display: grid; position: absolute; height: 500px; padding: 15px; right: 775px; text-align: center; top: 65px; width:200px;}
+.TH {display: grid; position: absolute; height: 500px; padding: 15px; right:355px; text-align: center; top: 65px; width:200px;}
+
+
+/* M W F blocks  */
+.block1 {grid-column: 1; grid-row: 1; border: 1px solid red; padding: 20px;}
+.block2 {grid-column: 1; grid-row: 2; border: 1px solid red; padding: 20px;}
+.block3 {grid-column: 1; grid-row: 3; border: 1px solid red; padding: 20px;}
+.block4 {grid-column: 1; grid-row: 4; border: 1px solid red; padding: 20px;}
+.block5 {grid-column: 1; grid-row: 5; border: 1px solid red; padding: 20px;}
+.block6 {grid-column: 1; grid-row: 6; border: 1px solid red; padding: 20px;}
+.block7 {grid-column: 1; grid-row: 7; border: 1px solid red; padding: 20px;}
+.block8 {grid-column: 1; grid-row: 8; border: 1px solid red; padding: 20px;}
+.block9 {grid-column: 1; grid-row: 9; border: 1px solid red; padding: 20px;}
+
+<!-- /* T TH blocks */-->
+.block1t {grid-column: 1; grid-row: 1; border: 1px solid red; padding: 20px;}
+.block2t {grid-column: 1; grid-row: 2; border: 1px solid red; padding: 20px;}
+.block3t {grid-column: 1; grid-row: 3; border: 1px solid red; padding: 20px;}
+.block4t {grid-column: 1; grid-row: 4; border: 1px solid red; padding: 20px;}
+.block5t {grid-column: 1; grid-row: 5; border: 1px solid red; padding: 20px;}
+.block6t {grid-column: 1; grid-row: 6; border: 1px solid red; padding: 20px;}
+.block7t {grid-column: 1; grid-row: 7; border: 1px solid red; padding: 20px;}
+.block8t {grid-column: 1; grid-row: 8; border: 1px solid red; padding: 20px;}
+.block9t {grid-column: 1; grid-row: 9; border: 1px solid red; padding: 20px;}
+
 
 </style>
 
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<head> 
+
+	<!-- initializes jQuery  -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
+	<script>
 
-<script>
+/* Adds affect once loaded on browser--*/
+$('#here_table').append(table);
 	$(function() {
 	
 	$('#panel1').hide(300).show(1000);
@@ -44,67 +70,80 @@ table.center {margin-left:auto; margin-right:auto; position: abosolute;}
 	
 </script>
 
+
+
 <table class="center" width="80%">
 	<body>
 
-	<caption>  </caption>
-		<thead>
+		<head> <!-- days of the week headers -->
+		
+			
 			<th scope ="col" id="panel1" class="Mon" > Monday </th>
 			<th scope="col" id="panel2" class="Tues"> Tuesday </th>
 			<th scope="col" id="panel3" class="Wed"> Wednesday </th> 
 			<th scope="col" id="panel4" class="Thur"> Thursday </th> 
 			<th scope="col" id="panel5" class="Fri" > Friday </th> 
 		
-		</thead>
+		<thead>
+		
+		<!-- Rows for each day of the week-->
+			<div class="M">
+				<div class="block1">  <font color="#D3D3D3">8:00 - 8:50 </font></div>
+				<div class="block2"> <font color="#D3D3D3">9:10 - 10:00 </div>
+				<div class="block3"> <font color="#D3D3D3">11:20 - 12:20 </div>
+				<div class="block4"> <font color="#D3D3D3">12:30 - 1:20 </div>
+				<div class="block5"> <font color="#D3D3D3">1:40 - 2:30 </div>
+				<div class="block6"> <font color="#D3D3D3">2:40 - 3:30 </div>
+				<div class="block7"> <font color="#D3D3D3">2:40 - 3:30 </div>
+				<div class="block8"> <font color="#D3D3D3">3:50 - 5:05 </div>
+				<div class="block9"> <font color="#D3D3D3">7:00 - 9:30 </div>
+			</div>
+			<div class="T">
+				<div class="block1t"> 8:00 - 9:15 </div>
+				<div class="block2t"> 9:25 - 10:40 </div>
+				<div class="block3t"> 10:50 - 12:30 </div>
+				<div class="block4t"> 1:00 - 2:15 </div>
+				<div class="block5t"> 2:25 - 3:40 </div>
+				<div class="block6t"> 3:50 - 5:05 </div>
+				<div class="block7t"> 7:00 - 9:30 </div>			<!-- there are less blocks T/TH -->
+			</div>
+			<div class="W">
+				<div class="block1"> 8:00 - 8:50 </div>
+				<div class="block2"> 9:10 - 10:00 </div>
+				<div class="block3"> 11:20 - 12:20 </div>
+				<div class="block4"> 12:30 - 1:20 </div>
+				<div class="block5"> 1:40 - 2:30 </div>
+				<div class="block6"> 2:40 - 3:30 </div>
+				<div class="block7"> 2:40 - 3:30 </div>
+				<div class="block8"> 3:50 - 5:05 </div>
+				<div class="block9"> 7:00 - 9:30 </div>
+			</div>
+			<div class="TH">
+				<div class="block1t"> 8:00 - 9:15 </div>
+				<div class="block2t"> 9:25 - 10:40 </div>
+				<div class="block3t"> 10:50 - 12:30 </div>
+				<div class="block4t"> 1:00 - 2:15 </div>
+				<div class="block5t"> 2:25 - 3:40 </div>
+				<div class="block6t"> 3:50 - 5:05 </div>
+				<div class="block7t"> 7:00 - 9:30 </div>			<!-- there are less blocks T/TH -->
+			</div>
+			<div class="F">
+				<div class="block1"> 8:00 - 8:50 </div>
+				<div class="block2"> 9:10 - 10:00 </div>
+				<div class="block3"> 11:20 - 12:20 </div>
+				<div class="block4"> 12:30 - 1:20 </div>
+				<div class="block5"> 1:40 - 2:30 </div>
+				<div class="block6"> 2:40 - 3:30 </div>
+				<div class="block7"> 2:40 - 3:30 </div>
+				<div class="block8"> 3:50 - 5:05 </div>
+				<div class="block9"> 7:00 - 9:30 </div>
+			</div>
 		
 		
-		<tbody>
-		
-		<div class="vl"></div>
-		<div class="v2"></div>
-		<div class="v3"></div>
-		<div class="v4"></div>
-		<div class="v5"></div>
-		<div class="v6"></div>		
-		</tbody>
-				
+	</body>
+			
 </table>
 
 
 
-<div class="time" style="width:350px; margin:80px;">
-		<div>
-		<div>8:00</div><br>
-		<br>
-		<div>9:00</div><br>
-		<br>
-		<div>10:00</div><br>
-		<br>
-		<div>11:00</div><br>
-		<br>
-		<div>12:00</div><br>
-		<br>
-		<div>1:00</div><br>
-		<br>
-		<div>2:00</div><br>
-		<br>
-		<div>3:00</div><br>
-		<br>
-		<div>4:00</div><br>
-		<br>
-		<div>5:00</div><br>
-		<br>
-		<div>6:00</div><br>
-		<br>
-		<div>7:00</div><br>
-		<br>
-		<div>8:00</div><br>
-		<br>
-		<div>9:00</div><br>
-		<br>
-		<dive>10:00</div>
-		</div>
-	
-	<div class="vertical"/>
-	</body>
 </html>
