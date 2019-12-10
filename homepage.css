@@ -96,7 +96,6 @@ button {
         position: absolute;
         color: white;
         border-radius: 5px;
-}
 .inputone {
         width: 600px;
         background: #037ffc;
@@ -104,6 +103,22 @@ button {
         outline: none;
         border-bottom: 5px inset black;
         color: white;
-        font-size: 18px;
+        font-size: 19px;
         margin-bottom: 16px;
 }
+
+buttontwo {
+        background-color: white;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+        font-family: technical;
+        font-size: 18px;
+        cursor: pointer;
+        transition-duration: 0.5s;
+        margin: 4px 2px;
+        padding: 16px 32px;
+        border-radius: 8px;
+        box-shadow: 4px 4px 2px black;
